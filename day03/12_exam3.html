@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contain{
+            width: 190px;
+            height: 250px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .box{
+            width: 170px;
+            height: 30px;
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 5px auto;
+            font-weight: 700;
+        }
+        .box2{
+            height: 170px;
+            position: relative;
+        }
+        .box2>div{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            box-shadow: 2px 2px 2px rgb(182, 182, 182);
+        }
+        .inbox1{
+            left: 25px;
+            top: 25px;
+            background-color: red;
+            z-index: 100;
+        }
+        .inbox2{
+            left: 50px;
+            top: 50px;
+            background-color: green;
+            z-index: 80;
+        }
+        .inbox3{
+            left: 75px;
+            top: 75px;
+            background-color: blue;
+            z-index: 60;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="box box1">텍스트</div>
+        <div class="box box2">
+            <div class="inbox1"></div>
+            <div class="inbox2"></div>
+            <div class="inbox3"></div>
+        </div>
+        <div class="box box3">텍스트</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        font 지정
+        - 글꼴 / 크기 / 스타일 / 굵기
+        - font-family : 브라우저마다 지원하는 폰트가 다르고, 언어마다 달라 폰트의 묶음으로 
+        - 지정하려는 폰트를 , 로 나열
+        - 마지막 폰트는 기본형으로 지정(serif)
+        - 폰트명에 띄어쓰기가 있으면 따옴표 씀. (ex. "나눔 고딕", 굴림)
+        - font-size : 글자크기
+        - font-style : 기울림꼴
+        - font-weight : 굵기 100~900 (100단위, 700이 보통)
+        - font : 속성을 한번에 지정하는 경우
+        - font [style | weight] size family
+    -->
+        <style>
+            @font-face {
+                font-family: SingleDay-Regular;
+                src: url(../font/Single_Day/);
+            }
+            .font{
+                font-family: 'Nanum Brush Script', cursive;
+                font-weight: 700;
+                font-style: nomal;
+            }
+        </style>
+</head>
+<body>
+    <div class="font">안녕하세요.</div>
+</body>
+</html>

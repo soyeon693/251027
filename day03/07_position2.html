@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer1{
+            height: 150px;
+            position: relative;
+            background-color: rgb(253, 242, 224);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 25px;
+        }
+        .box1{
+            background-color: aqua;
+            left: 25px;
+        }
+        .box2{
+            background-color: brown;
+            margin: 0 auto;
+            left: 50%; /* 절반의 중심 앞쪽 */
+            /* transform: translate(x축, y축) 기본적으로 중앙 정렬시 사용*/
+            transform: translate(-50%);
+        }
+        .box3{
+            background-color: blueviolet;
+            right: 25px;
+        }
+        /* 
+            마진 상쇄효과 (margin collapsing) 
+            - 부모 요소에 padding-top, border-top를 추가하면 부모와 자식 요소가
+            분리되어 마진에 들어감
+            - 부모요소에 overflow:hidden 추가하면 마진 상쇄효과를 방지
+        */
+        .outer2{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            /* margin: 0 auto; block 속성 태그일 경우 */
+            /* overflow: hidden; */
+            position: relative;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            /* margin: 100px auto 0; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="outer1">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    <div class="outer2">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

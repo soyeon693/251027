@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Jua&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        @keyframes shadow {
+            0%{text-shadow: 1px 1px rgb(39, 211, 211);}
+            50%{text-shadow: 2px 2px white;}
+            100%{text-shadow: 1px 1px rgb(39, 211, 211);}
+        }
+        body{
+            background-color: aqua;
+            text-align: center;
+            font-family: "Jua", sans-serif;  
+        }
+        header>h5{
+            text-shadow: 2px 2px 2px rgb(255, 255, 255);
+            animation: shadow 3s infinite;
+        }
+        .menu{
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 30px auto;
+            font-size: 100;
+        }
+        .image{
+            width: 200px;
+            height: 150px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+        }
+        .image>img{
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .image:hover{
+            transform: scale(1.05, 1.05);
+            overflow: hidden;
+        }
+        .payment{
+            color: blue;
+        }
+        .payment:hover{
+            font-weight: 600;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="back">
+        <header>
+            <h1>배달의 민족</h1>
+            <h5>넌 배달할 때가 제일 멋있어</h5>
+        </header>
+        <div class="menu">
+            <div class="image"><img src="../초밥.jpg" alt="초밥"></div>
+            <div class="p_name"><h3>맛있는 초밥</h3></div>
+            <div class="content">주머니가 가벼운 당신의 마음까지 생각한 착한 가격!</div>
+            <div class="price"><small><del>29,000원</del> 15,000원</small></div>
+            <a href="" class="payment"><small>바로결제</small></a>
+        </div>
+        <div class="menu">
+            <div class="image"><img src="../피자.jpg" alt="피자"></div>
+            <div class="p_name"><h3>피자</h3></div>
+            <div class="content">내햄들디이런거시키지말라</div>
+            <div class="price"><small><del>29,000원</del> 15,000원</small></div>
+            <a href="" class="payment"><small>바로결제</small></a>
+        </div>
+        <div class="menu">
+            <div class="image"><img src="../초밥.jpg" alt="초밥"></div>
+            <div class="p_name"><h3>맛있는 초밥</h3></div>
+            <div class="content">주머니가 가벼운 당신의 마음까지 생각한 착한 가격!</div>
+            <div class="price"><small><del>29,000원</del> 15,000원</small></div>
+            <a href="" class="payment"><small>바로결제</small></a>
+        </div>
+        <div class="menu">
+            <div class="image"><img src="../초밥.jpg" alt="초밥"></div>
+            <div class="p_name"><h3>맛있는 초밥</h3></div>
+            <div class="content">주머니가 가벼운 당신의 마음까지 생각한 착한 가격!</div>
+            <div class="price"><small><del>29,000원</del> 15,000원</small></div>
+            <a href="" class="payment"><small>바로결제</small></a>
+        </div>
+        <div class="menu">
+            <div class="image"><img src="../초밥.jpg" alt="초밥"></div>
+            <div class="p_name"><h3>맛있는 초밥</h3></div>
+            <div class="content">주머니가 가벼운 당신의 마음까지 생각한 착한 가격!</div>
+            <div class="price"><small><del>29,000원</del> 15,000원</small></div>
+            <a href="" class="payment"><small>바로결제</small></a>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

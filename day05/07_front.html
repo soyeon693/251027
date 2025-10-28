@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <Link rel="stylesheet" href="rest.css" -->
+    <!-- 
+        width : 100% (부모의) 화면 전체 길이
+        height : 100% (부모의) 화면 전체 높이
+    -->
+     <style>
+        /* link를 css 내부로 이동 */
+        @import url(rest.css);
+        .container{
+            width: 100%;
+            height: 100vh; /* 화면의 전체 */
+            background: linear-gradient(rgb(231, 231, 231,0.03), rgb(63, 63, 63,0.5)),url(../실디.jpg);
+            background-size: cover;
+        }
+        .container .navbar{
+            width: 90%;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container > .navbar > h1 {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .container > .navbar > ul{
+            display: flex;
+            justify-content: space-between;
+            /* width: 30px; */
+        }
+        .container .navbar > ul > li{
+            margin: 0 10px;
+        }
+        .container .navbar > ul > li> a{
+            color: white;
+            font-weight: 700;
+        }
+        .container>.navbar>ul>li>a:hover{
+            cursor: pointer;
+            color: rgb(252, 178, 42);
+        }
+        .container>.main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .container>.main h2{
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        .container>.main button{
+            border: 2px solid rgb(59, 61, 60);
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: azure;
+            transition: 0.5s;
+        }
+        .container>.main button:hover{
+            cursor: pointer;
+            background-color: rgb(59, 61, 60);
+            color: azure;
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>DESIGN</h1>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">LOGIN</a></li>
+                <li><a href="">SIGNUP</a></li>
+                <li><a href="">BOARD</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h2>Welcome to Front-End World</h2>
+            <a href=""><button>Learn More</button></a>
+        </div>
+    </div>
+</body>
+</html>

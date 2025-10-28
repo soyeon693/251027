@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        /* table td{
+
+        } */
+    </style>
+</head>
+<body>
+    <button type="button" id="btn">구구단 전체 출력</button>
+    <div class="gugu"></div>
+
+    <script>
+        /* 콜백함수 : 함수 안에서 다른 함수를 호출
+            - 전달인자(매개변수)로 다른 함수에 전달되는 함수
+            - 콜백함수를 전달할 때 () 붙이지 않는 이유는 함수 자체를 참조하여 다른 함수에게 전달하기 위해서이다,
+            - ()를 붙이면 함수가 즉시 실행되어 버리지만, ()를 붙이지 않는다면,
+              함수 객체 자체가 매개변수로 전달되어 콜백 함수를 넘겨받은 함수가 원하는 시점에 직접 실행할 수 있게 된다.
+
+            - ()가 있을 떄 : 즉시 실행되어 그 반환값이 전달
+            - ()가 없을 때 : 함수 그 자체(함수 객체)가 전달
+        */
+
+        const gugu = document.getElementById('gugu');
+
+        document.getElementById('btn').addEventListener('click', guguFunc);
+        console.log(guguFunc);
+
+        function guguFunc(){
+            let incre =1;
+            let str = `<table>`;
+            while(incre <10){
+                let dan =2;
+                str += `<tr>`;
+                    while(dan<10){
+                        str += `<td>${dan}*${incre}=${dan*incre}</td>`;
+                        dan++;
+                    }
+                str += `</tr>`;
+                incre++;
+            }
+            str += `</table>`
+            gugu.innerHTML = str;
+        }
+    </script>
+
+
+    <!-- <input type="text" id="dan">단 구구단
+    <button type="button" id="btn1">출력</button>
+    <hr>
+    <button type="button" id="btn">구구단 전체 출력</button>
+    <div class="gugu"></div>
+    <table id="table"></table>
+    <script>
+        function gugudan(){
+            let str='';
+                for(let i=2; i<=9; i++){
+                    str += `<tr>`;
+                        for(let j=1; j<=9; j++){
+                            str+= `<td>${i}*${j}=${j*i}</td>`;
+                        }
+                        str += `</tr>`
+                    }
+            document.getElementById('table').innerHTML = str;
+
+        };
+
+        document.getElementById('btn').addEventListener('click', gugudan());
+
+        function gugudan1(){
+            let dan = Number(document.getElementById('dan').value);
+            let incre =1;
+            let str ='';
+            while(incre<=9){
+                str+= `${dan}*${incre}=${dan*incre} `;
+                incre++;
+            }
+            document.getElementById('gugu').innerHTML = str;
+        }
+        document.getElementById('btn1').addEventListener('click', gugudan1());
+    </script> -->
+</body>
+</html>

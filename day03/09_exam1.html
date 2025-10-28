@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p-box{
+            background-color: rgb(244, 255, 241);
+        }
+        .box{
+            width: 25%;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+            border-right: none;
+            box-sizing: border-box;
+            float: left;
+            line-height: 40px;
+        }
+        .p-box::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .box4{
+            border-right: 1px solid black;
+        }
+        .box:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-bpx">
+        <div class="box box1"><a href="http://naver.com" target="_blank">menu1</a></div>
+        <div class="box box2"><a href="" target="_blank">menu2</a></div>
+        <div class="box box3"><a href="" target="_blank">menu3</a></div>
+        <div class="box box4"><a href="" target="_blank">menu4</a></div>
+    </div>
+</body>
+</html>

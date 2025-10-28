@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>할인율 구하기</legend>
+        가격: <input type="text" id="price">원 <br>
+        할인율: <input type="text" id="rate">% <br>
+        <button onclick="clickEvent()">할인가격 계산</button>
+
+        <!-- 가격과 할인율에 따른 지불금액 구하기 -->
+        <!-- 가격: / 할인율: / 할인금액: / 지불금액: -->
+        <h3 id="result"></h3>
+    </fieldset>
+
+    <script>
+        function clickEvent(){
+            let price = Number(document.getElementById('price').value);
+            let rate = Number(document.getElementById('rate').value);
+
+            let sale = price*(rate/100);
+            let pay = price - sale;
+            
+            document.getElementById('result').innerHTML = `
+            가격: ${price} / 할인율: ${rate} % <br>
+            할인금액: ${sale} / 지불금액: ${pay}`;
+        }
+        
+    </script>
+</body>
+</html>

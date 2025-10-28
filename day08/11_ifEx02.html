@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        이름, 국어, 영어, 수학 점수를 입력받고 계산 버튼을 누르면
+        합계, 평균, 80점 이상이면 합격
+        국어, 영어, 수학의 값이 0~100 사이의 값이 아니라면-> alert 창을 띄워 안내 후 창의 정보를 지움.
+    -->
+    <fieldset>
+        <legend>성적표</legend>
+        name: <input type="text" id="name"><br>
+        kor: <input type="text" id="kor"><br>
+        eng: <input type="text" id="eng"><br>
+        math: <input type="text" id="math"><br>
+        <button onclick="clickEvent()">성적계산</button>
+    </fieldset>
+    <ul id="ul"></ul>
+
+    <script>
+        function clickEvent(){
+            let kor = Number(document.getElementById('kor').value);
+            let eng = Number(document.getElementById('eng').value);
+            let math = Number(document.getElementById('math').value);
+
+            function check(num, id){
+                if(num>100 || num<0){
+                    alert("0~100사이 값 입력!");
+                    document.getElementById(id).value = '';
+                    document.getElementById('ul').innerHTML= '';
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+
+            if(check(kor, 'kor') && check(eng, 'eng') && check(math, 'math')){
+                let sum = kor+eng+math;
+                let avg = (sum/3).toFixed(2);
+                let pass= avg>=80 ? 'pass' : 'fail';
+    
+                document.getElementById('ul').innerHTML= `
+                <li>합계:${sum}</li>
+                <li>평균:${avg}</li>
+                <li>${pass}</li>
+                `;
+            }
+
+            // const kor = document.getElementById('kor');
+            // const eng = document.getElementById('eng');
+            // const math = document.getElementById('math');
+            
+            // let kor_num = Number(kor.value);
+            // let eng_num = Number(eng.value);
+            // let math_num = Number(math.value);
+
+            // if(kor_num>100 || kor_num<0){
+            //     alert("0~100사이 값 입력!");
+            //     kor.value ='';
+            // }else if(eng_num>100 || eng_num<0){
+            //     alert("0~100사이 값 입력!");
+            //     eng.value ='';
+            // }else if(math_num>100 || math_num<0){
+            //     alert("0~100사이 값 입력!");
+            //     math.value ='';
+            // }else{
+            //     let sum = kor_num+eng_num+math_num;
+            //     let avg = (sum/3).toFixed(2);
+            //     let pass='';
+            //     if(avg>=80){pass='합격'}
+            //     else(pass='불합격');
+    
+            //     document.getElementById('ul').innerHTML= `
+            //     <li>합계:${sum}</li>
+            //     <li>평균:${avg}</li>
+            //     <li>${pass}</li>
+            //     `;
+            // }
+
+        }
+    </script>
+</body>
+</html>

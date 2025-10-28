@@ -1,0 +1,275 @@
+@import url(../day05/rest.css);
+@font-face {
+  font-family: 'pretendard'; /* 사용할 이름 */
+  src: url(../Pretendard-1.3.9/public/static/Pretendard-Medium.otf);
+}
+
+body{
+    font-family: Noto_Sans_KR;
+    color: black;
+}
+.wrap{
+    min-width: 1400px;
+}
+.inner{
+    width: 1360px;
+    margin: auto;
+    box-sizing: border-box;
+}
+/* header */
+body{
+    font-family: 'pretendard';
+}
+.header{
+    position: sticky;
+    top: 0;
+    /* background-color: aqua; */
+}
+.header.scrolled{
+    background-color: white;
+    color: black;
+}
+.header>.inner
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(255, 255, 255,0.3);
+}
+.header>.inner>.left{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header>.inner>.left-top>a{
+    color: white;
+    font-size: 13px;
+    /* padding: 10px; */
+}
+/* .header>.inner>.left-top>a:last-child{
+    border-left: 1px solid rgb(255, 255, 255,0.3);
+} */
+.header>.inner>.right-top>a{
+    color: white;
+    font-size: 12px;
+}
+.header>.inner>.right-top>a:last-child{
+    border-left: 1px solid rgb(255, 255, 255,0.3);
+}
+.header>.inner>.left-bt>a{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+/* .header>.inner>.left-bt>svg{
+    color: white;
+} */
+.header>.inner>.right-bt>a{
+    color: white;
+    border: 1px solid white;
+    border-radius: 17px;
+    padding: 5px 17px;
+}
+/* .header>.inner>.left-bt>a:hover {
+    .header{
+        background-color: white;
+    }
+    .header>.inner{
+        color: black;
+    }
+} */
+.main>.slide>img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -100;
+}
+.main>.slide>.inner{
+    /* margin-bottom: 50px; */
+    padding-top: 150px;
+}
+.main>.slide>.inner>span{
+    display: block;
+    color: white;
+    font-size: 54px; 
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;    
+}
+.main>.slide>.inner>p{
+    color: white;
+    font-size: 24px;
+    /* padding: bottom 50px; */
+}
+.main>.slide>.inner>.time{
+    /* width: 1328px; */
+    height: 80px;
+    /* background-color: rgb(4, 52, 110); */
+    padding: 100px;
+    display: flex;
+}
+.main>.slide>.inner>.time>.left{
+    width: 1060px;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* box-sizing: border-box; */
+}
+.main>.slide>.inner>.time>.left>ul{
+    /* width: 30%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main>.slide>.inner>.time>.left>ul>li{
+    width: 195px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main>.slide>.inner>.time>.left>ul>li>svg{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.main>.slide>.inner>.time>.left>ul>li>p{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.main>.slide>.inner>.time>.right{
+    width: 26.8rem;
+    height: 80px;
+    background-color: rgb(0, 96, 60,1);
+    display: flex;
+    align-items: center;
+}
+.main>.slide>.inner>.time>.right>.text{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.main>.slide>.inner>.time>.right>.text>svg{
+    color: white;
+    height: 28px;
+    width: 28px;
+}
+.main>.slide>.inner>.time>.right>.text>button{
+    background-color: rgb(0, 96, 60,1);
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.con1{
+    margin-bottom: 120px;
+}
+.con1>.inner>.subhead{
+    font-size: 32pt;
+    font-weight: 700;
+    /* display: block;
+    display: flex;
+    justify-content: space-between; */
+}
+.con1>.inner>.card{
+    width: 100%;
+    height: 233px;
+    /* background-color: violet; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 32px;
+    margin: 16px 0 0 ;
+}
+.con1>.inner>.card>img{
+    width: 320px;
+    height: 200px;
+    background-color: blue;
+}
+.con1>.inner>.card>.text{
+    width: 976px;
+    /* margin-left: 20px; */
+}
+.con1>.inner>.card>.text>strong{
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    /* margin: 16px 0 0; */
+}
+.con1>.inner>.card>.text>span{
+    font-size: 18px;
+    display: flex;
+    margin: 8px 0;
+}
+.con1>.inner>.card>.text>p{
+    font-size: 16px;
+    color: rgb(102,102,102);
+    display: flex;
+    margin: 16px 0 0;
+}
+.con1>.inner>.card>.text>a{
+    font-size: 14px;
+    color: rgb(17,17,17);
+    display: flex;
+    margin: 24px 0 0;
+}
+.con1>.inner>.page{
+    /* width: 100%; */
+    height: 36px;
+    margin: 16px 0 0;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con1>.inner>.page>button{
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.con2{
+    width: 100%;
+    background-image: url(../박물관_con2_ground.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 150px;
+}
+.con2>.inner>.head{
+    width: 100%;
+    font-size: 48px;
+}
+.con2>.inner>.head>span{
+    display: flex;
+    justify-content: center;
+}
+.con2>.inner>.tabfull>.tablist{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con2>.inner>.tabfull>.tablist>button{
+    padding: 4px 16px;
+}
+.con2>.inner>.tabfull>.cardbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.con2>.inner>.tabfull>.cardbox>.card{
+    height: 400px;
+    width: 24%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.con2>.inner>.tabfull>.cardbox>.card>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

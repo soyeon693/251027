@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=password]{
+            background-color: aquamarine;
+        }
+        button[type=submit]{
+            background-color: blue;
+        }
+        button[class=btn]{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div><label for="id">user ID</label><input type="text" name="id" id="id" placeholder="8자이상" required></div>
+        <div><label for="pw">user PW</label><input type="password" name="pw" id="pw" placeholder="8자이상" required></div>
+        <div><label for="pin">user PIN</label><input type="password" name="pin" id="pin" placeholder="8자이상" required></div>
+        <div>
+            <button type="button" class="btn">일반버튼</button>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+        </div>
+    </form>
+
+</body>
+</html>
