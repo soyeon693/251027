@@ -16,9 +16,9 @@
         가위바위보 이미지를 버튼채그에 넣어 선택하여 가위바위보의 승률 계산
     -->
 
-    <button onclick="play(0)"><img src="../math_img_1.jpg" alt=""></button>
-    <button onclick="play(1)"><img src="../math_img_2.jpg" alt=""></button>
-    <button onclick="play(2)"><img src="../math_img_3.jpg" alt=""></button>
+    <button ><img id="0" src="../math_img_1.jpg" alt=""></button>
+    <button ><img id="1" src="../math_img_2.jpg" alt=""></button>
+    <button ><img id="2" src="../math_img_3.jpg" alt=""></button>
     <!-- 
         player:가위 / com: 바위 player가 졌습니다.
         현재 전적
@@ -29,6 +29,17 @@
     <h1 id="result"></h1>
 
     <script>
+
+        document.addEventListener('click', (e)=>{
+            // 모든 화면에 이벤트가 달림
+            // 동적으로 생기는 모든 객체에 이벤트 추가 가능
+            console.log(e.target.id);
+            // id가 존재할 때만 작동
+            if(e.target.id){
+                play(e.target.id);
+            }
+        })
+
         // 전역변수
         let win=0;
         let draw=0;

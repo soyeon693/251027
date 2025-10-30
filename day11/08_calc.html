@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            height: 100px;
+            width: 350px;
+            background-color: rgb(255, 255, 185);
+            border: 2px solid rgb(124, 165, 42);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            font-weight: 700;
+            font-size: 20px;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        .main > button{
+            height: 80px;
+            width: 80px;
+            background-color: rgb(251, 172, 172);
+            font-weight: 700;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            gap: 10px;
+        }
+        .main > #c{
+            background-color: rgb(230, 111, 111);
+            width: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="h1"></h1>
+        
+        <div class="main">
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" value="+">+</button>
+    
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" value="-">-</button>
+    
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" value="*">*</button>
+            
+            <button type="button" value=".">.</button>
+            <button type="button" value="0">0</button>
+            <button type="button" value="=">=</button>
+            <button type="button" value="/">/</button>
+    
+            <button type="butto" value="c" id="c">C</button>
+        </div>
+    </div>
+
+    <script>
+        let str = '';
+
+        document.getElementById('c').addEventListener('click',()=>{
+            window.location.reload();
+            str='';
+        })
+
+        let calc = 0;
+        document.addEventListener('click',(e)=>{
+            let x = e.target.value;
+            
+            if(x == "="){
+                str = calc(str);
+            }else{
+                str += x;
+                console.log(calc)
+            }
+            console.log(str);
+            document.getElementById('h1').innerHTML = str;
+        })
+
+        function calc(str) {
+            let opArr = str.split(/[+|-|*|/]/);
+            let numArr = Number(str.split(/d/));
+            console.log(opArr);
+            console.log(numArr);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1~99까지의 숫자 중 하나를 랜덤으로 선택하여 해당 숫자를 맞추는 게임
+    -->
+    <div>
+        <button id="random">랜덤 숫자 생성 버튼</button>
+        <button id="re"> 다시 시도</button>
+        <h1 id="printMsg"></h1>
+    </div>
+    <div>
+        <input type="text" id="myNum">
+        <button type="button" id="compareNum">제출!</button>
+        <h1 id="result"></h1>
+    </div>
+
+    <script>
+        // 새로고침(다시시도)
+        document.getElementById('re').addEventListener('click',()=>{
+            window.location.reload(); // 새로고침
+            location.reload();
+        })
+
+        let num = 0;
+        document.getElementById('random').addEventListener('click', ()=>{
+            num = Math.floor(Math.random()*99+1);
+            console.log(num);
+            document.getElementById('printMsg').innerText = '랜덤수가 생성되었습니다!';
+        })
+
+        let cnt =0;
+        let result = '';
+        document.getElementById('compareNum').addEventListener('click', ()=>{
+            let myNum = Number(document.getElementById('myNum').value);
+            console.log(myNum);
+
+            if(cnt==7){
+                result+= 'GAME OVER';
+                cnt=0;
+                num=0;
+            }else if(num==0){
+                document.getElementById('printMsg').innerText ='랜덤수를 생성해주세요!';
+                result='';
+            }else if(myNum>99 || myNum<1){
+                result +='1~99사이의 숫자를 입력해 주세요!';
+            }else if(myNum == num){
+                result += `정답!! ${num}이었습니다! \n`;
+            }else if(myNum>num){
+                cnt++;
+                result +=`시도횟수:${cnt} / ${myNum}DOWN!! \n`;
+            }else if(myNum<num){
+                cnt++;
+                result +=`시도횟수:${cnt} / ${myNum}UP!! \n`;
+            }
+            document.getElementById('result').innerText= result;
+        })
+    </script>
+</body>
+</html>
